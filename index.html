@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Criptografia</title>
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+	<h1>Cifra de César</h1>
+	<form>
+		<div class="field">
+			<label>Texto</label>
+			<input id="text" type="text" />
+		</div>
+		<div class="field">
+			<label>Intervalo/Chave</label>
+			<input id="chave" type="number" />
+		</div>
+	</form>
+	<div class="choose">
+		<label>Descriptografar?</label>
+		<input id="choose" type="checkbox" />
+	</div>
+	<button onclick="cesar()">Concluir</button>
+	<div id="result"></div>
+
+	<div id="janela">
+		<div id="cabecalho">
+			<h1>Cifra de Vigenère</h1>
+		</div>
+		<div id="entrada">
+			<h2>Entrada</h2>
+			<textarea id="texto_entrada" rows="5"></textarea>
+			<h2>Chave</h2>
+			<textarea id="texto_chave" rows="1"></textarea>
+			<div id="opcoes">
+				<button id="btnEncriptar" class="button btnEncriptar" onClick="vigenere('E')">ENCRIPTAR</button>
+				<button id="btnDesencriptar" class="button btnDesencriptar" onClick="vigenere('D')">DESENCRIPTAR</button>
+			</div>
+			<div id="saida" style="display: none">
+				<h2>Resultado</h2>
+				<div id="resultado"></div>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h1>Análise de frequência</h1>
+		<input type="text" id="frase">
+		<button onclick="analise()">Analisar</button>
+		<div id="resultado_frase"></div>
+	</div>
+	
+	<script src="./script.js"></script>
+</body>
+</html>
